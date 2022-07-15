@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & + .wrapper {
+        margin-top: 16px;
+    }
+}
+
+.label {
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    background-image: radial-gradient(purple, red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input {
+    padding: 16px;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    outline: none;
+    border-radius: unset;
+
+    &:focus {
+        border-color: rgb(0, 0, 0, 0.5);
+    }
+}

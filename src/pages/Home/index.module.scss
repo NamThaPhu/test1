@@ -1,0 +1,83 @@
+.container {
+    &-slider {
+        margin-bottom: 24px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            background-image: linear-gradient(to top right, #ff9966, #ff5e62);
+            height: calc(100vh - var(--header-height) * 5 + 4px);
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        & .slide {
+            height: calc(100vh - var(--header-height) * 3);
+        
+            & .image {
+                height: inherit;
+                width: inherit;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.category-sidebar {
+    width: var(--sidebar-width);
+    background-image: linear-gradient(to left bottom, rgb(255, 0, 0, 0.1), transparent);
+    box-shadow: var(--box-shadow);
+    padding-bottom: 32px;
+}
+
+.product-list {
+    width: calc(var(--container-width) - var(--sidebar-width) - 16px * 3);
+}
+// -- lọc sản phẩm theo danh mục
+
+
+.group {
+    &-title {
+        &-news {
+            background-image: unset;
+            color: orangered;
+        }
+    }
+}
+
+// custom
+.title {
+    background-image: unset;
+    color: red;
+    text-align: left;
+    margin-bottom: unset;
+    padding-left: unset;
+}
+
+.product {
+    background-image: unset;
+    background-color:rgb(0, 0, 0, 0.025);
+}
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        padding: unset;
+    }
+
+    .container {
+        &-slider {
+            margin-bottom: unset;
+            
+            &::after {
+                display: none;
+            }
+
+            & .slide {
+                height: calc(220px - 220px / 3);
+            }
+        }
+    }
+}

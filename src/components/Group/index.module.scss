@@ -1,0 +1,36 @@
+.wrapper {
+    background-color: transparent;
+    margin-bottom: 16px;
+
+    & + .wrapper {
+        margin-left: 16px;
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 16px;
+    font-size: 1.125rem;
+    background-image: linear-gradient(to right bottom, transparent, red);
+    color: white;
+}
+
+@for $i from 1 through 10 {
+    .list-#{$i} {
+        display: grid;
+        grid-template-columns: repeat(#{$i}, 1fr);
+        gap: 16px;
+    }
+}
+
+@for $i from 1 through 4 {
+    .space-#{$i} {
+        gap: #{$i * 4}px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+    }
+}

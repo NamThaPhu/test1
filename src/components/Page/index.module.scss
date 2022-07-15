@@ -1,0 +1,10 @@
+.wrapper {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - var(--header-height));
+    padding-bottom: 48px;
+}
+

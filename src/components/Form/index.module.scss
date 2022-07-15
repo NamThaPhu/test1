@@ -1,0 +1,33 @@
+.wrapper {
+    padding: 16px;
+    background-color: white;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    padding-bottom: 32px;
+    text-transform: uppercase;
+    background-image: radial-gradient(purple, red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list {
+}
+
+.actions {
+    width: 100%;
+    margin-top: 32px;
+
+    & .action {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        background-image: linear-gradient(orangered, black);
+    }
+}
+
